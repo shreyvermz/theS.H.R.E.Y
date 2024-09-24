@@ -1,5 +1,6 @@
 import pandas as pd 
 import numpy as np
+import sys
 #player stats from 1998-2022
 
 # ADD A KEY TO CHANGE ABBREVIATIONS TO FULL NAMES AND FULL NAMES TO ABBREVIATIONS
@@ -149,7 +150,7 @@ def scoring(name, season): # find out how many players averaged more points afte
     
     else:
         # in case info is not found
-        return 'Player or season not found in database.'
+        sys.exit('Player not found in database. Try running the program again and choosing a valid input. Remember, retired players may have a \'*\' following their name')
 ############################################################################################################## 
 def help(name, season): # get a help scaler as a result of POINTS RATIO / STOCKS SCALER /  REASONABILITY FUNCTION OUTPUT
                         # assists and rebounds are given tiers and applied to the help scaler
@@ -250,12 +251,15 @@ def help(name, season): # get a help scaler as a result of POINTS RATIO / STOCKS
             print(str(better_apg) + ' players averaged more assists in ' + str(season) + '.')
             print(str(better_rpg) + ' players averaged more rebounds in ' + str(season) + '.')
             print('The total help score so far is ' + str(np.round(help_grade, 2)))
-            if (won_title == True):
-                print(str(name) + ' won a title this season, so his role will change from ' + str(status) + ' to Winner.')
-                status = 'Winner'
+            if season <= '2018-19':
+                if (won_title == True):
+                    print(str(name) + ' won a title this season, so his role will change from ' + str(status) + ' to Winner.')
+                    status = 'Winner'
+                else:
+                    print(str(name) + ' played the role of ' + str(status) + ' for ' + str(team_full_name))
             else:
+                print('Player played outside of database holding championships, so if a title was won, the Role will not update.')
                 print(str(name) + ' played the role of ' + str(status) + ' for ' + str(team_full_name))
-            # print('This player won a title this season: ' + str(won_title))
             
             
             
@@ -944,7 +948,8 @@ def the_process(player_name, season):
     # check yearly outlook we have to incorporate third database, which we will connect by sending the string name of a team to it
     # for example, easiest would be to send the city name, but then Lakers and Clippers would be compromised (maybe make an exception case for them)
 #####################################################################################################################################
-
+print('When entering a player\'s name, please be sure to spell correctly and add necessary punctuation. ' +\
+     'If a player is retired, you may need to follow their name with a *')
 player_name = input('Enter the name of a player to analyze with S.H.R.E.Y.: ')
 player_season = input('Enter the year you would like to view (format as YYYY-YY): ') 
 the_process(player_name, player_season)
