@@ -2,7 +2,7 @@
 ### A Basketball Statistics Analysis Tool Gauging Impact on Winning
 
 ## Description
-Great play and contribution typically stands out like a sore thumb on the stat sheets, making it easy for fans to deduce reasonable conclusions regarding a player from quick box score analysis.
+Great play and contribution typically stands out like a sore thumb on the stat sheets, making it easy for fans to deduce seemingly reasonable conclusions regarding a player from quick box score analysis.
 In the same vein, it can be hard for high-impact players to garner recognition when they provide intangibles that aren't encapsulated effectively by the box score.
 The box score can be very deceiving when it comes to distinguishing how impactful a player truly is, and the **S.H.R.E.Y.** was devised as a way to go past the box score, and truly find the impact of a player. Using NBA databases
 **specifically from 1998-2022**, this program contextualizes a player's impact based on team play, defensive efficiency, offensive contributions outside of scoring, and the era they played in.
