@@ -1,5 +1,5 @@
 # The S.H.R.E.Y. 
-### A Basketball Statistics Analysis Tool for Impact on Winning
+### A Basketball Statistics Analysis Tool Gauging Impact on Winning
 
 ## Description
 Great play and contribution typically stands out like a sore thumb on the stat sheets, making it easy for fans to deduce conclusions regarding a player from quick, sometimes unreliable, box score analysis.
