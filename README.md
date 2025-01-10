@@ -15,8 +15,7 @@ While doing this, I inadvertently learned the means to accomplish a basketball-r
 ### **S**: **Scoring**
 The first criteria being looked at is Scoring. We first find the player's point per game average on the season inputted, and sort the player into tiers depending on the averages.
 These tiers, which are an integer value that increases as points per game increases, have different criteria for each different era of basketball accounted for. We will touch over more on the eras in the **Reasonability** section. 
-If a player was within the top 10 for scoring averages on the season, they received a complimentary scaler ranging from 1.05 to 1.5, the scaler increasing as the number of players
-averaging more dwindles. 
+If a player was within the top 10 for scoring averages on the season, they received a complimentary scaler ranging from 1.05 to 1.5, the scaler increasing as the amount of other players averaging more begins to grow smaller.
 #### Final Scoring Grade:   
 (points per game * tier) * (scaler, if the player qualified)
 
